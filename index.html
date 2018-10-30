@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <li v-for="(item, index) in list">
+        <li>ID.{{ item[index].id }}{{ item.name }} HP:{{ item.hp }}</li>
+      </li>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
