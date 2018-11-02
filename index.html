@@ -7,15 +7,13 @@
   </head>
   <body>
     <div id="app">
-      名前 <input v-model="name">
-      <button v-on:click="doAdd">モンスターを追加</button>
       <ul>
-        <li v-for="item in list" v-bind:key="item.id">
+        <li v-for="(item, index) in list" v-bind:key="item.id" v-if="item.hp">
           ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-          <button v-on:click="doRemove(index)">モンスターを削除</button>
+          <span v-if="item.hp < 50">瀕死！</span>
+          <button v-on:click="doAttack(index)">攻撃する</button>
         </li>
       </ul>
-      <button v-on:click="addKing">キングスライム</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="main.js"></script>
