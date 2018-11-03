@@ -7,8 +7,18 @@
   </head>
   <body>
     <div id="app">
-      <!-- <span>{{ message }}</span> -->
-      <span v-html="message"></span>
+      <textarea v-model="message"></textarea>
+      <pre>{{ message }}</pre>
+
+      <select v-model="val" multiple>
+        <option value="a">A</option>
+        <option value="b">B</option>
+        <option value="c">C</option>
+      </select>
+      <p>{{ val }}</p>
+
+      <input type="text" v-model.number="price"> {{ price }}
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="main.js"></script>

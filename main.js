@@ -1,7 +1,12 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello <strong>Vue.js!</strong>'
+    message: 'Hello!',
+    val: [],
+    price: 100
+  },
+  methods: {
+
   }
   
 });
