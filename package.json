@@ -1,0 +1,6 @@
+{
+  "devDependencies": {},
+  "scripts": {
+    "lint": "eslint -c google your-code.js"
+  }
+}
